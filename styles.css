@@ -1,0 +1,256 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/styles.css b/styles.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..e61237a6b0964abf871b7977f2784ec2bab2b703
+--- /dev/null
++++ b/styles.css
+@@ -0,0 +1,246 @@
++:root {
++  --bg: #f4f7fc;
++  --text: #0f172a;
++  --muted: #475569;
++  --brand: #0f4c81;
++  --brand-2: #1d4ed8;
++  --white: #ffffff;
++  --line: #dce6f1;
++  --ok: #0a7e4f;
++}
++
++* {
++  box-sizing: border-box;
++}
++
++html,
++body {
++  margin: 0;
++  font-family: Inter, sans-serif;
++  color: var(--text);
++  background: var(--white);
++  scroll-behavior: smooth;
++}
++
++.container {
++  width: min(1140px, 92vw);
++  margin: 0 auto;
++}
++
++.hero {
++  position: relative;
++  color: var(--white);
++  background: linear-gradient(120deg, #0b3559 0%, #1d4ed8 100%);
++}
++
++.overlay {
++  position: absolute;
++  inset: 0;
++  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 35%);
++  pointer-events: none;
++}
++
++.nav,
++.hero-content {
++  position: relative;
++  z-index: 1;
++}
++
++.nav {
++  padding: 1.15rem 0;
++  display: flex;
++  justify-content: space-between;
++  align-items: center;
++  gap: 1rem;
++}
++
++.brand {
++  color: var(--white);
++  font-weight: 800;
++  letter-spacing: 0.05em;
++  text-decoration: none;
++}
++
++.nav-links {
++  display: flex;
++  align-items: center;
++  flex-wrap: wrap;
++  gap: 0.95rem;
++}
++
++.nav-links a {
++  color: var(--white);
++  text-decoration: none;
++  font-weight: 500;
++}
++
++.hero-content {
++  padding: 4.2rem 0 4.4rem;
++  max-width: 870px;
++}
++
++.kicker {
++  margin: 0;
++  text-transform: uppercase;
++  font-size: 0.78rem;
++  letter-spacing: 0.09em;
++  font-weight: 700;
++  opacity: 0.9;
++}
++
++h1,
++h2,
++h3 {
++  line-height: 1.22;
++}
++
++h1 {
++  font-size: clamp(2rem, 2.7vw, 3.4rem);
++  margin: 0.7rem 0 1rem;
++}
++
++h2 {
++  font-size: clamp(1.5rem, 2vw, 2.2rem);
++  margin: 0.4rem 0 1rem;
++}
++
++h3 {
++  margin-top: 0;
++}
++
++p,
++li {
++  color: var(--muted);
++}
++
++.hero p {
++  color: rgba(255, 255, 255, 0.94);
++}
++
++.btn {
++  border: 1px solid transparent;
++  border-radius: 0.7rem;
++  padding: 0.72rem 1.02rem;
++  background: var(--white);
++  color: var(--brand);
++  text-decoration: none;
++  font-weight: 700;
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++}
++
++.btn-outline {
++  background: transparent;
++  color: var(--white);
++  border-color: rgba(255, 255, 255, 0.58);
++}
++
++.hero-cta {
++  margin-top: 1.6rem;
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.75rem;
++}
++
++.section {
++  padding: 4.1rem 0;
++}
++
++.section-head {
++  max-width: 820px;
++  margin-bottom: 1.2rem;
++}
++
++.cards {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
++  gap: 1rem;
++}
++
++.card {
++  border: 1px solid var(--line);
++  border-radius: 1rem;
++  padding: 1rem;
++  background: var(--white);
++  min-height: 210px;
++}
++
++.alt {
++  background: var(--bg);
++}
++
++.split {
++  display: grid;
++  grid-template-columns: 1.35fr 0.85fr;
++  gap: 1.2rem;
++}
++
++.highlight {
++  border: 1px solid var(--line);
++  border-radius: 1rem;
++  background: var(--white);
++  padding: 1rem;
++}
++
++.highlight ul {
++  padding-left: 1rem;
++  margin-bottom: 0;
++}
++
++.highlight li {
++  margin-bottom: 0.5rem;
++}
++
++.ethics {
++  border-top: 1px solid var(--line);
++  border-bottom: 1px solid var(--line);
++}
++
++.checklist {
++  margin: 0;
++  padding-left: 1.1rem;
++}
++
++.checklist li {
++  margin-bottom: 0.6rem;
++}
++
++.checklist li::marker {
++  color: var(--ok);
++}
++
++.cta {
++  background: #0d2140;
++}
++
++.cta h2,
++.cta .kicker,
++.cta p {
++  color: var(--white);
++}
++
++.cta-wrap {
++  display: flex;
++  justify-content: space-between;
++  align-items: center;
++  gap: 1rem;
++}
++
++.cta-actions {
++  display: flex;
++  gap: 0.7rem;
++  flex-wrap: wrap;
++}
++
++@media (max-width: 900px) {
++  .nav,
++  .cta-wrap {
++    flex-direction: column;
++    align-items: flex-start;
++  }
++
++  .split {
++    grid-template-columns: 1fr;
++  }
++}
+ 
+EOF
+)
