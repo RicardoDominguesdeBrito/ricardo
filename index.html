@@ -1,0 +1,206 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..09b1e8e86eed7c8f6176547117c66a04eb6262d3
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,196 @@
++<!DOCTYPE html>
++<html lang="pt-BR">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Brito & Associados | Inteligência Pericial e Auditoria em Saúde</title>
++    <meta
++      name="description"
++      content="Site institucional da Brito & Associados: assistência técnica, auditoria e inteligência pericial em saúde para demandas administrativas e judiciais."
++    />
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <header class="hero" id="topo">
++      <div class="overlay"></div>
++      <nav class="container nav">
++        <a class="brand" href="#topo">BRITO & ASSOCIADOS</a>
++        <div class="nav-links">
++          <a href="#atuacao">Atuação</a>
++          <a href="#corpo-tecnico">Corpo Técnico</a>
++          <a href="#compliance">Compliance</a>
++          <a class="btn btn-outline" href="#contato">Orçamento</a>
++        </div>
++      </nav>
++
++      <section class="container hero-content">
++        <p class="kicker">Fundamentação técnica para decisões judiciais</p>
++        <h1>Inteligência Pericial e Auditoria em Saúde</h1>
++        <p>
++          Atuamos na interface técnica entre Saúde e Direito, oferecendo
++          análises técnico-científicas para subsidiar decisões administrativas e
++          judiciais, esclarecer controvérsias assistenciais e apoiar a
++          compreensão de contextos clínicos complexos.
++        </p>
++        <p>
++          Nossa atuação é estritamente técnica, documental e pericial,
++          respeitando os limites éticos e legais de cada profissão da saúde.
++        </p>
++        <div class="hero-cta">
++          <a class="btn" href="#atuacao">Conhecer serviços</a>
++          <a class="btn btn-outline" href="#contato">Falar com especialista</a>
++        </div>
++      </section>
++    </header>
++
++    <main>
++      <section id="atuacao" class="container section">
++        <div class="section-head">
++          <p class="kicker">Áreas de atuação</p>
++          <h2>Assistência técnica especializada em saúde</h2>
++        </div>
++
++        <div class="cards">
++          <article class="card">
++            <h3>Assistência Técnica em Demandas Judiciais</h3>
++            <p>
++              Suporte técnico-científico para advogados, escritórios e tribunais
++              em eventos adversos, falhas assistenciais, home care, terapias de
++              alto custo e diagnósticos complexos.
++            </p>
++          </article>
++
++          <article class="card">
++            <h3>Medicamentos de Alto Custo e GLP-1</h3>
++            <p>
++              Pareceres técnico-farmacológicos em terapias oncológicas,
++              canabinoides, análogos de GLP-1 e doenças raras, com avaliação de
++              evidência científica e impacto do atraso terapêutico.
++            </p>
++          </article>
++
++          <article class="card">
++            <h3>Diagnóstico de Alta Complexidade</h3>
++            <p>
++              Análise técnica para PET-CT, ressonância magnética, investigação
++              laboratorial especializada, genética e biologia molecular (Exoma,
++              NGS e cariótipos de alta resolução).
++            </p>
++          </article>
++
++          <article class="card">
++            <h3>Home Care e Internação Domiciliar (PAD)</h3>
++            <p>
++              Classificação técnico-assistencial, justificativas técnicas de
++              enfermagem e dimensionamento de insumos/equipamentos para
++              continuidade assistencial.
++            </p>
++          </article>
++
++          <article class="card">
++            <h3>Health Advocacy Técnico-Informativo</h3>
++            <p>
++              Organização de histórico clínico, análise documental pós-consulta,
++              tradução técnica de orientações e apoio à segurança informacional
++              do paciente.
++            </p>
++          </article>
++
++          <article class="card">
++            <h3>Reabilitação e Neurodesenvolvimento</h3>
++            <p>
++              Atuação pericial em TEA, TDAH, implante coclear, audiologia e voz,
++              incluindo fundamentação técnica para negativas de cobertura e
++              perícias trabalhistas.
++            </p>
++          </article>
++
++          <article class="card">
++            <h3>Eventos Adversos e Falhas Assistenciais</h3>
++            <p>
++              Análise técnico-documental de prontuários e registros assistenciais
++              para verificação de aderência a protocolos, identificação de não
++              conformidades e formulação de quesitos técnicos.
++            </p>
++          </article>
++        </div>
++      </section>
++
++      <section id="corpo-tecnico" class="alt section">
++        <div class="container split">
++          <div>
++            <p class="kicker">Corpo técnico</p>
++            <h2>Equipe multiprofissional legalmente habilitada</h2>
++            <p>
++              Atuação coordenada por profissionais da saúde com experiência em
++              Gestão em Saúde, Farmácia, Bioquímica e Fonoaudiologia, além de
++              especialistas associados conforme a natureza da demanda.
++            </p>
++            <p>
++              Todos os pareceres respeitam escopo legal e ético de cada
++              profissão, com responsabilidade técnica e observância às normas
++              vigentes.
++            </p>
++          </div>
++          <aside class="highlight">
++            <h3>Nossos entregáveis</h3>
++            <ul>
++              <li>Análise técnico-documental de registros assistenciais.</li>
++              <li>Formulação de quesitos técnicos fundamentados.</li>
++              <li>Análise crítica metodológica de laudos periciais.</li>
++              <li>Pareceres técnicos para pontos controversos.</li>
++            </ul>
++          </aside>
++        </div>
++      </section>
++
++      <section id="compliance" class="container section ethics">
++        <div class="section-head">
++          <p class="kicker">Ética, compliance e limites</p>
++          <h2>Atuação técnica, documental e pericial</h2>
++        </div>
++
++        <ul class="checklist">
++          <li>Não realizamos diagnóstico médico ou prescrição terapêutica.</li>
++          <li>Não substituímos o profissional assistente.</li>
++          <li>Não garantimos resultados administrativos ou judiciais.</li>
++          <li>Nossos serviços são técnico-científicos, periciais e informativos.</li>
++          <li>
++            Atuamos com confidencialidade, conforme legislação vigente e códigos
++            de ética profissionais.
++          </li>
++        </ul>
++      </section>
++
++      <section id="contato" class="cta section">
++        <div class="container cta-wrap">
++          <div>
++            <p class="kicker">Contato</p>
++            <h2>Colocamos o site novo no ar e pronto para evoluir</h2>
++            <p>
++              O projeto já está funcional no repositório. Agora podemos integrar
++              sua identidade visual final, mídias e formulários.
++            </p>
++          </div>
++
++          <div class="cta-actions">
++            <a class="btn" href="mailto:contato@britosaude.com.br">Pedir orçamento</a>
++            <a
++              class="btn btn-outline"
++              href="https://www.instagram.com/britosaude"
++              target="_blank"
++              rel="noreferrer"
++              >Instagram</a
++            >
++          </div>
++        </div>
++      </section>
++    </main>
++  </body>
++</html>
+ 
+EOF
+)
